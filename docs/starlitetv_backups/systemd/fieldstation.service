@@ -1,0 +1,15 @@
+[Unit]
+Description=FieldStation42
+After=network.target
+
+[Service]
+Type=simple
+User=dratsum
+Environment=DISPLAY=:0
+WorkingDirectory=/home/dratsum/git/FieldStation42
+ExecStart=/home/dratsum/git/FieldStation42/venv/bin/python field_player.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,54 @@
+{
+  "station_conf": {
+    "network_name": "VIDEODROME",
+    "channel_number": 7,
+    "network_long_name": "Videodrome",
+    "network_type": "standard",
+    "schedule_increment": 10,
+    "break_duration": 1800,
+    "break_strategy": "end",
+    "commercial_free": false,
+    
+    "content_dir": "/home/dratsum/git/FieldStation42/content/videodrome",
+    "commercial_dir": "commercials",
+    "bump_dir": "bumps",
+    
+    "clip_shows": [],
+    
+    "day_templates": {
+      "allday": {
+        "0":  {"tags": "movies"},
+        "1":  {"tags": "movies"},
+        "2":  {"tags": "movies"},
+        "3":  {"tags": "movies"},
+        "4":  {"tags": "movies"},
+        "5":  {"tags": "movies"},
+        "6":  {"tags": "movies"},
+        "7":  {"tags": "movies"},
+        "8":  {"tags": ["movies", "shows"]},
+        "9":  {"tags": ["movies", "shows"]},
+        "10": {"tags": ["movies", "shows"]},
+        "11": {"tags": ["movies", "shows"]},
+        "12": {"tags": "movies"},
+        "13": {"tags": "movies"},
+        "14": {"tags": "movies"},
+        "15": {"tags": ["movies", "shows"]},
+        "16": {"tags": ["movies", "shows"]},
+        "17": {"tags": ["movies", "shows"]},
+        "18": {"tags": ["shows", "movies"]},
+        "19": {"tags": ["shows", "movies"]},
+        "20": {"tags": ["shows", "movies"]},
+        "21": {"tags": ["shows", "movies"]},
+        "22": {"tags": "movies"},
+        "23": {"tags": "movies"}
+      }
+    },
+    "monday": "allday",
+    "tuesday": "allday",
+    "wednesday": "allday",
+    "thursday": "allday",
+    "friday": "allday",
+    "saturday": "allday",
+    "sunday": "allday"
+  }
+}

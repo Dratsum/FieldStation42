@@ -1,0 +1,23 @@
+{"station_conf": {
+    "network_name": "GUIDE",
+    "network_type": "guide",
+    "channel_number": 2,
+    "network_long_name": "FieldStation42 Guide",
+    "messages": [
+      "FIELDSTATION42\nIt's Up To You!",
+      "STARLITE TV\nNow Broadcasting.",
+      "FIELDSTATION42\nRetro Cable Goodness.",
+      "STARLITE TV\nTimeless TV.",
+      "FIELDSTATION42\nLong Live The New Flesh."
+    ],
+    "images": [
+      "runtime/logo_images/gold42.png",
+      "runtime/logo_images/groove42.png",
+      "runtime/logo_images/city42.png",
+      "runtime/logo_images/timeless42.png",
+      "runtime/logo_images/mountains42.png"
+    ],
+    "play_sound": false,
+    "fullscreen": true,
+    "scroll_speed": 1.0
+}}

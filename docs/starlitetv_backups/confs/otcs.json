@@ -1,0 +1,9 @@
+{"station_conf": {
+    "network_name": "OTCS",
+    "network_type": "streaming",
+    "channel_number": 15,
+    "network_long_name": "Old Tech Computer Show",
+    "streams": [
+        {"url": "https://otcs.minuspoint.com/hls/0/stream.m3u8", "duration": 0, "title": "OTCS Live"}
+    ]
+}}

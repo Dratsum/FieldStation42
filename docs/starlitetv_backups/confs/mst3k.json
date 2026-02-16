@@ -1,0 +1,9 @@
+{"station_conf": {
+    "network_name": "MST3K",
+    "network_type": "streaming",
+    "channel_number": 13,
+    "network_long_name": "Mystery Science Theater 3000",
+    "streams": [
+        {"url": "https://www.youtube.com/watch?v=B7qOZraAIlw", "duration": 0, "title": "MST3K Forever-a-thon"}
+    ]
+}}

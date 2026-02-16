@@ -251,6 +251,15 @@ def main_loop(transition_fn, shutdown_queue=None, api_proc=None):
         elif player_state.status == PlayerState.FAILED:
             stuck_timer += 1
 
+            # After 3 consecutive failures, mpv is likely dead — restart it
+            if stuck_timer >= 3:
+                logger.warning("Multiple consecutive failures - restarting mpv")
+                try:
+                    player.restart_mpv()
+                    stuck_timer = 0
+                except Exception as e:
+                    logger.error(f"Failed to restart mpv: {e}")
+
             # only put it up once after 2 seconds of being stuck
             if stuck_timer == 2:
                 stand_by = channel_conf.get("standby_image", StationManager().server_conf.get("standby_image", "runtime/standby.png"))

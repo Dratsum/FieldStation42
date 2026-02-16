@@ -1,0 +1,54 @@
+{
+  "station_conf": {
+    "network_name": "TV PARTY",
+    "channel_number": 5,
+    "network_long_name": "TV Party",
+    "network_type": "standard",
+    "schedule_increment": 10,
+    "break_duration": 1800,
+    "break_strategy": "end",
+    "commercial_free": false,
+    
+    "content_dir": "/home/dratsum/git/FieldStation42/content/tv_party",
+    "commercial_dir": "commercials",
+    "bump_dir": "bumps",
+    
+    "clip_shows": [],
+    
+    "day_templates": {
+      "allday": {
+        "0": {"tags": "music"},
+        "1": {"tags": "music"},
+        "2": {"tags": "music"},
+        "3": {"tags": "music"},
+        "4": {"tags": "music"},
+        "5": {"tags": "music"},
+        "6": {"tags": "music"},
+        "7": {"tags": "music"},
+        "8": {"tags": "music"},
+        "9": {"tags": "music"},
+        "10": {"tags": "music"},
+        "11": {"tags": "music"},
+        "12": {"tags": "music"},
+        "13": {"tags": "music"},
+        "14": {"tags": "music"},
+        "15": {"tags": "music"},
+        "16": {"tags": "music"},
+        "17": {"tags": "music"},
+        "18": {"tags": "music"},
+        "19": {"tags": "music"},
+        "20": {"tags": "music"},
+        "21": {"tags": "music"},
+        "22": {"tags": "music"},
+        "23": {"tags": "music"}
+      }
+    },
+    "monday": "allday",
+    "tuesday": "allday",
+    "wednesday": "allday",
+    "thursday": "allday",
+    "friday": "allday",
+    "saturday": "allday",
+    "sunday": "allday"
+  }
+}

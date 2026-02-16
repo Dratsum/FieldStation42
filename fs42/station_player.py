@@ -2,6 +2,7 @@ from enum import Enum
 import logging
 
 import multiprocessing
+import subprocess
 import time
 import datetime
 import json
@@ -216,6 +217,33 @@ class StationPlayer:
 
         self.mpv.terminate()
 
+    def restart_mpv(self):
+        """Kill dead mpv and start a fresh instance."""
+        self._l.warning("Restarting mpv instance")
+        try:
+            self.mpv.terminate()
+        except Exception:
+            pass
+        # Kill any orphaned mpv processes using the socket
+        subprocess.run(["pkill", "-f", "mpvsocket"], capture_output=True)
+        time.sleep(1)
+
+        start_it = True
+        if "start_mpv" in StationManager().server_conf:
+            start_it = StationManager().server_conf["start_mpv"]
+
+        self.mpv = MPV(
+            start_mpv=start_it,
+            ipc_socket="/tmp/mpvsocket",
+            input_default_bindings=False,
+            fs=True,
+            idle=True,
+            force_window=True,
+            script_opts="osc-idlescreen=no",
+            hr_seek="yes",
+        )
+        self._l.info("MPV instance restarted successfully")
+
     def update_filters(self):
         self.mpv.vf = self.reception.filter()
 
@@ -290,26 +318,40 @@ class StationPlayer:
                 self.mpv.play(file_path)
                 
                 
-                # Wait for video to load with timeout to prevent blocking on invalid streams
+                # Wait for video to load with timeout to prevent blocking on invalid files.
+                # Streams (YouTube live, HLS) may never report a numeric duration,
+                # so for streams we just wait for mpv to start playing (path != None)
+                # with a longer timeout to allow yt-dlp extraction.
                 ready_to_return = False
-                timeout_seconds = 2
+                timeout_seconds = 15 if is_stream else 2
                 start_time = time.time()
 
                 while not ready_to_return:
                     try:
-                        got_duration = self.mpv.duration  # Uses __getattr__ internally
-                        if got_duration is not None:
-                            ready_to_return = True
+                        if is_stream:
+                            # Streams may never have a duration; just check mpv is alive
+                            mpv_path = self.mpv.path
+                            if mpv_path is not None:
+                                ready_to_return = True
+                            else:
+                                if time.time() - start_time > timeout_seconds:
+                                    self._l.error(f"Timeout waiting for stream to start on {file_path}")
+                                    return False
+                                time.sleep(0.25)
                         else:
-                            if time.time() - start_time > timeout_seconds:
-                                self._l.error(f"Timeout waiting for duration on {file_path}")
-                                return False
-                            time.sleep(0.05)
+                            got_duration = self.mpv.duration  # Uses __getattr__ internally
+                            if got_duration is not None:
+                                ready_to_return = True
+                            else:
+                                if time.time() - start_time > timeout_seconds:
+                                    self._l.error(f"Timeout waiting for duration on {file_path}")
+                                    return False
+                                time.sleep(0.05)
                     except Exception as e:
                         if time.time() - start_time > timeout_seconds:
                             self._l.error(f"Error getting duration: {e}")
                             return False
-                        time.sleep(0.05)
+                        time.sleep(0.05 if not is_stream else 0.25)
 
                 # Perform seek if needed (before showing overlay)
                 if not is_stream and current_time is not None and current_time > 0:
@@ -662,39 +704,57 @@ class StationPlayer:
 
                     # this is our main event loop
                     keep_waiting = True
-                    while keep_waiting:
-                        if not self.skip_reception_check:
-                            self.update_reception()
-                        else:
-                            if self.scrambler:
-                                self.mpv.vf = self.scrambler.update_filter()
-
-                        # Calculate time remaining based on wall clock
-                        time_remaining = (target_end_time - datetime.datetime.now()).total_seconds()
-
-                        # Initiate fade-to-black effect when entering fade window (only if clipped)
-                        if 0 < time_remaining <= FADE_DURATION and not fade_active and is_clipped:
-                            self._l.info(f"Starting fade with {time_remaining:.2f}s remaining")
-
-                            # Use MPV's built-in fade filter with duration
-                            # Fade video to black (only if not using scramble effects)
+                    try:
+                        while keep_waiting:
                             if not self.skip_reception_check:
-                                try:
-                                    # Use fade filter: fade out to black over remaining time
-                                    self.mpv.vf = f"fade=t=out:st=0:d={time_remaining}"
-                                except Exception as e:
-                                    self._l.debug(f"Could not set video fade filter: {e}")
+                                self.update_reception()
+                            else:
+                                if self.scrambler:
+                                    self.mpv.vf = self.scrambler.update_filter()
 
-                            fade_active = True
+                            # Calculate time remaining based on wall clock
+                            time_remaining = (target_end_time - datetime.datetime.now()).total_seconds()
 
-                        if time_remaining <= 0:
-                            keep_waiting = False
-                        else:
-                            # debounce time
+                            # Initiate fade-to-black effect when entering fade window (only if clipped)
+                            if 0 < time_remaining <= FADE_DURATION and not fade_active and is_clipped:
+                                self._l.info(f"Starting fade with {time_remaining:.2f}s remaining")
+
+                                # Use MPV's built-in fade filter with duration
+                                # Fade video to black (only if not using scramble effects)
+                                if not self.skip_reception_check:
+                                    try:
+                                        # Use fade filter: fade out to black over remaining time
+                                        self.mpv.vf = f"fade=t=out:st=0:d={time_remaining}"
+                                    except Exception as e:
+                                        self._l.debug(f"Could not set video fade filter: {e}")
+
+                                fade_active = True
+
+                            if time_remaining <= 0:
+                                keep_waiting = False
+                            else:
+                                # debounce time
+                                time.sleep(0.05)
+                                response = self.input_check_fn()
+                                if response:
+                                    return response
+                    except BrokenPipeError:
+                        self._l.error("MPV connection lost during playback")
+                        return PlayerOutcome(PlayerState.FAILED)
+                elif is_stream:
+                    # duration=0 streams play indefinitely until user input
+                    self._l.info("Monitoring stream indefinitely (duration=0)")
+                    try:
+                        while True:
+                            if not self.skip_reception_check:
+                                self.update_reception()
                             time.sleep(0.05)
                             response = self.input_check_fn()
                             if response:
                                 return response
+                    except BrokenPipeError:
+                        self._l.error("MPV connection lost during stream playback")
+                        return PlayerOutcome(PlayerState.FAILED)
                 else:
                     return PlayerOutcome(PlayerState.FAILED)
 

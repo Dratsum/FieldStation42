@@ -1,0 +1,9 @@
+{"station_conf": {
+    "network_name": "WEATHER",
+    "network_type": "streaming",
+    "channel_number": 4,
+    "network_long_name": "WeatherStar",
+    "streams": [
+        {"url": "http://192.168.0.51:8888/weatherstar/index.m3u8", "duration": 0, "title": "WeatherStar NYC"}
+    ]
+}}

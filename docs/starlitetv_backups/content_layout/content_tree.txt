@@ -1,0 +1,114 @@
+/home/dratsum/git/FieldStation42/content/:
+total 28
+drwxrwxr-x  7 dratsum dratsum 4096 Feb  2 23:20 .
+drwxrwxr-x 16 dratsum dratsum 4096 Feb  2 23:20 ..
+drwxrwxr-x  3 dratsum dratsum 4096 Feb  3 01:00 mnn
+drwxrwxr-x  3 dratsum dratsum 4096 Feb  3 01:00 starlite24
+drwxrwxr-x  3 dratsum dratsum 4096 Feb  3 01:00 tv_party
+drwxrwxr-x  3 dratsum dratsum 4096 Feb  3 01:00 vhs_tv
+drwxrwxr-x  4 dratsum dratsum 4096 Feb  5 22:45 videodrome
+
+/home/dratsum/git/FieldStation42/content/mnn:
+total 12
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 .
+drwxrwxr-x 7 dratsum dratsum 4096 Feb  2 23:20 ..
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 bumps
+lrwxrwxrwx 1 dratsum dratsum   20 Feb  3 01:00 commercials -> /mnt/media/Pre Movie
+lrwxrwxrwx 1 dratsum dratsum   24 Feb  2 23:20 content -> /mnt/media/Public Access
+
+/home/dratsum/git/FieldStation42/content/mnn/bumps:
+total 16
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 .
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 ..
+lrwxrwxrwx 1 dratsum dratsum   68 Feb  3 00:52 Bubblicious Bubble Gum Ad.mp4 -> /mnt/media/Pre Movie/Trailers/Starlite/Bubblicious Bubble Gum Ad.mp4
+lrwxrwxrwx 1 dratsum dratsum   88 Feb  3 00:52 I have a bad case of Diarrhea - Japanese learning English.mp4 -> /mnt/media/Pre Movie/Music/I have a bad case of Diarrhea - Japanese learning English.mp4
+lrwxrwxrwx 1 dratsum dratsum   55 Feb  3 00:52 Pure Moods CD Commercial.mp4 -> /mnt/media/Pre Movie/Music/Pure Moods CD Commercial.mp4
+
+/home/dratsum/git/FieldStation42/content/starlite24:
+total 12
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 .
+drwxrwxr-x 7 dratsum dratsum 4096 Feb  2 23:20 ..
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 bumps
+lrwxrwxrwx 1 dratsum dratsum   20 Feb  3 01:00 commercials -> /mnt/media/Pre Movie
+lrwxrwxrwx 1 dratsum dratsum   37 Feb  2 23:20 movies -> /mnt/media/Movies/Drive-In Grindhouse
+
+/home/dratsum/git/FieldStation42/content/starlite24/bumps:
+total 16
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 .
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 ..
+lrwxrwxrwx 1 dratsum dratsum   68 Feb  3 00:52 Bubblicious Bubble Gum Ad.mp4 -> /mnt/media/Pre Movie/Trailers/Starlite/Bubblicious Bubble Gum Ad.mp4
+lrwxrwxrwx 1 dratsum dratsum   88 Feb  3 00:52 I have a bad case of Diarrhea - Japanese learning English.mp4 -> /mnt/media/Pre Movie/Music/I have a bad case of Diarrhea - Japanese learning English.mp4
+lrwxrwxrwx 1 dratsum dratsum   55 Feb  3 00:52 Pure Moods CD Commercial.mp4 -> /mnt/media/Pre Movie/Music/Pure Moods CD Commercial.mp4
+
+/home/dratsum/git/FieldStation42/content/tv_party:
+total 12
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 .
+drwxrwxr-x 7 dratsum dratsum 4096 Feb  2 23:20 ..
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 bumps
+lrwxrwxrwx 1 dratsum dratsum   20 Feb  3 01:00 commercials -> /mnt/media/Pre Movie
+lrwxrwxrwx 1 dratsum dratsum   26 Feb  2 23:20 music -> /mnt/media/Pre Movie/Music
+
+/home/dratsum/git/FieldStation42/content/tv_party/bumps:
+total 16
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 .
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 ..
+lrwxrwxrwx 1 dratsum dratsum   68 Feb  3 00:52 Bubblicious Bubble Gum Ad.mp4 -> /mnt/media/Pre Movie/Trailers/Starlite/Bubblicious Bubble Gum Ad.mp4
+lrwxrwxrwx 1 dratsum dratsum   88 Feb  3 00:52 I have a bad case of Diarrhea - Japanese learning English.mp4 -> /mnt/media/Pre Movie/Music/I have a bad case of Diarrhea - Japanese learning English.mp4
+lrwxrwxrwx 1 dratsum dratsum   55 Feb  3 00:52 Pure Moods CD Commercial.mp4 -> /mnt/media/Pre Movie/Music/Pure Moods CD Commercial.mp4
+
+/home/dratsum/git/FieldStation42/content/vhs_tv:
+total 12
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 .
+drwxrwxr-x 7 dratsum dratsum 4096 Feb  2 23:20 ..
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 bumps
+lrwxrwxrwx 1 dratsum dratsum   20 Feb  3 01:00 commercials -> /mnt/media/Pre Movie
+lrwxrwxrwx 1 dratsum dratsum   21 Feb  2 23:20 movies -> /mnt/media/Movies/VHS
+
+/home/dratsum/git/FieldStation42/content/vhs_tv/bumps:
+total 16
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  3 00:52 .
+drwxrwxr-x 3 dratsum dratsum 4096 Feb  3 01:00 ..
+lrwxrwxrwx 1 dratsum dratsum   68 Feb  3 00:52 Bubblicious Bubble Gum Ad.mp4 -> /mnt/media/Pre Movie/Trailers/Starlite/Bubblicious Bubble Gum Ad.mp4
+lrwxrwxrwx 1 dratsum dratsum   88 Feb  3 00:52 I have a bad case of Diarrhea - Japanese learning English.mp4 -> /mnt/media/Pre Movie/Music/I have a bad case of Diarrhea - Japanese learning English.mp4
+lrwxrwxrwx 1 dratsum dratsum   55 Feb  3 00:52 Pure Moods CD Commercial.mp4 -> /mnt/media/Pre Movie/Music/Pure Moods CD Commercial.mp4
+
+/home/dratsum/git/FieldStation42/content/videodrome:
+total 16
+drwxrwxr-x 4 dratsum dratsum 4096 Feb  5 22:45 .
+drwxrwxr-x 7 dratsum dratsum 4096 Feb  2 23:20 ..
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  5 22:45 bumps
+lrwxrwxrwx 1 dratsum dratsum   39 Feb  5 21:13 commercials -> /mnt/media/Movies/Cyberpunk/commercials
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  5 22:24 movies
+lrwxrwxrwx 1 dratsum dratsum   33 Feb  5 21:13 music -> /mnt/media/Movies/Cyberpunk/music
+lrwxrwxrwx 1 dratsum dratsum   33 Feb  5 21:13 shows -> /mnt/media/Movies/Cyberpunk/shows
+
+/home/dratsum/git/FieldStation42/content/videodrome/bumps:
+total 16
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  5 22:45 .
+drwxrwxr-x 4 dratsum dratsum 4096 Feb  5 22:45 ..
+lrwxrwxrwx 1 dratsum dratsum   68 Feb  5 22:45 Bubblicious Bubble Gum Ad.mp4 -> /mnt/media/Pre Movie/Trailers/Starlite/Bubblicious Bubble Gum Ad.mp4
+lrwxrwxrwx 1 dratsum dratsum   88 Feb  5 22:45 I have a bad case of Diarrhea - Japanese learning English.mp4 -> /mnt/media/Pre Movie/Music/I have a bad case of Diarrhea - Japanese learning English.mp4
+lrwxrwxrwx 1 dratsum dratsum   55 Feb  5 22:45 Pure Moods CD Commercial.mp4 -> /mnt/media/Pre Movie/Music/Pure Moods CD Commercial.mp4
+
+/home/dratsum/git/FieldStation42/content/videodrome/movies:
+total 24
+drwxrwxr-x 2 dratsum dratsum 4096 Feb  5 22:24 .
+drwxrwxr-x 4 dratsum dratsum 4096 Feb  5 22:45 ..
+lrwxrwxrwx 1 dratsum dratsum   47 Feb  5 22:24 film-Akira_1988.mp4 -> /mnt/media/Movies/Cyberpunk/film-Akira_1988.mp4
+lrwxrwxrwx 1 dratsum dratsum   51 Feb  5 22:24 film-Appleseed_1988.mkv -> /mnt/media/Movies/Cyberpunk/film-Appleseed_1988.mkv
+lrwxrwxrwx 1 dratsum dratsum   51 Feb  5 22:24 film-Appleseed_1988.srt -> /mnt/media/Movies/Cyberpunk/film-Appleseed_1988.srt
+lrwxrwxrwx 1 dratsum dratsum   94 Feb  5 22:24 film_Armitage III Dual Matrix (DVD x264 Dual-Audio Opus) [eva].mkv -> /mnt/media/Movies/Cyberpunk/film_Armitage III Dual Matrix (DVD x264 Dual-Audio Opus) [eva].mkv
+lrwxrwxrwx 1 dratsum dratsum   58 Feb  5 22:24 film-Black_Magic_M-66_1987.mkv -> /mnt/media/Movies/Cyberpunk/film-Black_Magic_M-66_1987.mkv
+lrwxrwxrwx 1 dratsum dratsum   52 Feb  5 22:24 film-Brainstorm_1983.mkv -> /mnt/media/Movies/Cyberpunk/film-Brainstorm_1983.mkv
+lrwxrwxrwx 1 dratsum dratsum   53 Feb  5 22:24 film-Cherry_2000_1987.mkv -> /mnt/media/Movies/Cyberpunk/film-Cherry_2000_1987.mkv
+lrwxrwxrwx 1 dratsum dratsum   60 Feb  5 22:24 film-Ghost_in_the_Shell_1995.mp4 -> /mnt/media/Movies/Cyberpunk/film-Ghost_in_the_Shell_1995.mp4
+lrwxrwxrwx 1 dratsum dratsum   50 Feb  5 22:24 film-Hardware_1990.mkv -> /mnt/media/Movies/Cyberpunk/film-Hardware_1990.mkv
+lrwxrwxrwx 1 dratsum dratsum   67 Feb  5 22:24 film-Metal_Skin_Panic_MADOX-01_1987.mkv -> /mnt/media/Movies/Cyberpunk/film-Metal_Skin_Panic_MADOX-01_1987.mkv
+lrwxrwxrwx 1 dratsum dratsum   67 Feb  5 22:24 film-Metal_Skin_Panic_MADOX-01_1987.srt -> /mnt/media/Movies/Cyberpunk/film-Metal_Skin_Panic_MADOX-01_1987.srt
+lrwxrwxrwx 1 dratsum dratsum   49 Feb  5 22:24 film-RoboCop_1987.mkv -> /mnt/media/Movies/Cyberpunk/film-RoboCop_1987.mkv
+lrwxrwxrwx 1 dratsum dratsum   51 Feb  5 22:24 film-RoboCop_2_1990.mkv -> /mnt/media/Movies/Cyberpunk/film-RoboCop_2_1990.mkv
+lrwxrwxrwx 1 dratsum dratsum   52 Feb  5 22:24 film-Rollerball_1975.mkv -> /mnt/media/Movies/Cyberpunk/film-Rollerball_1975.mkv
+lrwxrwxrwx 1 dratsum dratsum   54 Feb  5 22:24 film-Strange_Days_1995.mp4 -> /mnt/media/Movies/Cyberpunk/film-Strange_Days_1995.mp4
+lrwxrwxrwx 1 dratsum dratsum   59 Feb  5 22:24 film-The_Lawnmower_Man_1992.mp4 -> /mnt/media/Movies/Cyberpunk/film-The_Lawnmower_Man_1992.mp4
+lrwxrwxrwx 1 dratsum dratsum   53 Feb  5 22:24 film-Wicked_City_1987.mp4 -> /mnt/media/Movies/Cyberpunk/film-Wicked_City_1987.mp4
+lrwxrwxrwx 1 dratsum dratsum   53 Feb  5 22:24 film-Wicked_City_1987.srt -> /mnt/media/Movies/Cyberpunk/film-Wicked_City_1987.srt

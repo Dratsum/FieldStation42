@@ -1,0 +1,47 @@
+{
+  "music_dir": "/mnt/media-raid/MEDIA/vjdj/music",
+  "dayparts": [
+    {"name": "overnight", "start_hour": 2, "end_hour": 8, "subdir": "overnight"},
+    {"name": "daytime",   "start_hour": 8, "end_hour": 18, "subdir": "daytime"},
+    {"name": "nighttime", "start_hour": 18, "end_hour": 2, "subdir": "nighttime"}
+  ],
+  "clips_dir": "/mnt/media-raid/MEDIA/vjdj/clips",
+  "clips_dayparts": {
+    "nighttime": "/mnt/media-raid/MEDIA/Movies/Horror",
+    "overnight": "/mnt/media-raid/MEDIA/Movies/Drive-In Grindhouse"
+  },
+  "bumpers_dir": "/mnt/media-raid/MEDIA/vjdj/bumpers",
+  "bug_path": "/mnt/media-raid/MEDIA/vjdj/bug/bug_shockwaves.png",
+  "hls_dir": "/mnt/media-raid/MEDIA/vjdj/hls",
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "bitrate": "2500k",
+    "codec": "h264_nvenc",
+    "preset": "medium",
+    "pix_fmt": "yuv420p"
+  },
+  "audio": {
+    "codec": "aac",
+    "bitrate": "192k",
+    "sample_rate": 44100
+  },
+  "hls": {
+    "segment_duration": 4,
+    "list_size": 30,
+    "flags": "delete_segments+omit_endlist"
+  },
+  "mixing": {
+    "clip_min_duration": 10,
+    "clip_max_duration": 45,
+    "effects_per_clip_min": 1,
+    "effects_per_clip_max": 3,
+    "max_chunk_duration": 300
+  },
+  "bumpers": {
+    "interval_tracks": 4,
+    "interval_minutes": 20,
+    "min_interval_minutes": 10
+  }
+}

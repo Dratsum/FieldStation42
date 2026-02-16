@@ -1,0 +1,15 @@
+[Unit]
+Description=WeatherStar HLS Stream for FieldStation42
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dratsum
+WorkingDirectory=/home/dratsum/weatherstar
+ExecStart=/bin/bash /home/dratsum/weatherstar/start.sh
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

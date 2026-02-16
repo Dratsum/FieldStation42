@@ -1,0 +1,54 @@
+{
+  "station_conf": {
+    "network_name": "STARLITE 24",
+    "channel_number": 3,
+    "network_long_name": "Starlite 24 Drive-In Theater",
+    "network_type": "standard",
+    "schedule_increment": 10,
+    "break_duration": 1800,
+    "break_strategy": "end",
+    "commercial_free": false,
+    
+    "content_dir": "/home/dratsum/git/FieldStation42/content/starlite24",
+    "commercial_dir": "commercials",
+    "bump_dir": "bumps",
+    
+    "clip_shows": [],
+    
+    "day_templates": {
+      "allday": {
+        "0": {"tags": "movies"},
+        "1": {"tags": "movies"},
+        "2": {"tags": "movies"},
+        "3": {"tags": "movies"},
+        "4": {"tags": "movies"},
+        "5": {"tags": "movies"},
+        "6": {"tags": "movies"},
+        "7": {"tags": "movies"},
+        "8": {"tags": "movies"},
+        "9": {"tags": "movies"},
+        "10": {"tags": "movies"},
+        "11": {"tags": "movies"},
+        "12": {"tags": "movies"},
+        "13": {"tags": "movies"},
+        "14": {"tags": "movies"},
+        "15": {"tags": "movies"},
+        "16": {"tags": "movies"},
+        "17": {"tags": "movies"},
+        "18": {"tags": "movies"},
+        "19": {"tags": "movies"},
+        "20": {"tags": "movies"},
+        "21": {"tags": "movies"},
+        "22": {"tags": "movies"},
+        "23": {"tags": "movies"}
+      }
+    },
+    "monday": "allday",
+    "tuesday": "allday",
+    "wednesday": "allday",
+    "thursday": "allday",
+    "friday": "allday",
+    "saturday": "allday",
+    "sunday": "allday"
+  }
+}

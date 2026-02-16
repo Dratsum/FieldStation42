@@ -1,0 +1,14 @@
+[Unit]
+Description=FieldStation42 Web Server
+After=network.target fieldstation.service
+
+[Service]
+Type=simple
+User=dratsum
+WorkingDirectory=/home/dratsum/git/FieldStation42
+ExecStart=/home/dratsum/git/FieldStation42/venv/bin/python station_42.py --server --limit_memory 0.8
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

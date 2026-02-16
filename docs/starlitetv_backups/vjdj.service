@@ -1,0 +1,18 @@
+[Unit]
+Description=VJ/DJ HLS Pipeline for FieldStation42
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dratsum
+WorkingDirectory=/home/dratsum/vjdj
+ExecStart=/usr/bin/python3 /home/dratsum/vjdj/vj_pipeline.py
+Restart=on-failure
+RestartSec=30
+CPUQuota=80%
+KillMode=control-group
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
